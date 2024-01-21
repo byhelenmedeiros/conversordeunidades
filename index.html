@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Unidades</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
     <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -14,22 +14,23 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container mt-4">
         <h1 class="text-center mb-4">Conversor de Unidades</h1>
 
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
+        <!-- Ajuste na estrutura do grid para melhor visualização em desktop -->
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
                 <!-- Input Group -->
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text">Quantidade</span>
+                        <span class="input-group-text">Quantidade:</span>
                     </div>
                     <input type="number" id="input" name="input" class="form-control" placeholder="0">
                 </div>
 
                 <!-- Dropdowns for Units -->
-                <div class="row mb-3">
-                    <div class="col">
+                <div class="row mb-2">
+                    <div class="col-6">
                         <select name="from" id="from" class="form-control">
                             <option value="m">Metro(s)</option>
                             <option value="km">Quilômetros</option>
@@ -37,7 +38,7 @@
                             <option value="mm">Milímetros</option>
                         </select>
                     </div>
-                    <div class="col">
+                    <div class="col-6">
                         <select name="to" id="to" class="form-control">
                             <option value="noselect">Escolha a unidade</option>
                             <option value="m">Metro(s)</option>
@@ -47,7 +48,6 @@
                         </select>
                     </div>
                 </div>
-
                 <!-- Convert Button -->
                 <button id="convert-btn" class="btn btn-primary btn-block">Converter</button>
 
